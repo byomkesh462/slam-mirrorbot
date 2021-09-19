@@ -57,8 +57,8 @@ def sendPrivate(text: str, bot, update: Update, reply_markup: InlineKeyboardMark
             [InlineKeyboardButton("𝐉𝐎𝐈𝐍 𝐇𝐄𝐑𝐄", url = f"{LOG_CHANNEL_LINK}")]]
             sendMarkup(f"𝙳𝙴𝙰𝚁 {uname},\n\n<b>ɪ ғᴏᴜɴᴅ ᴛʜᴀᴛ ʏᴏᴜ ʜᴀᴠᴇɴ'ᴛ sᴛᴀʀᴛᴇᴅ ᴍᴇ ɪɴ ᴘᴍ (ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ) ʏᴇᴛ.</b>\n\n𝐅𝐑𝐎𝐌 𝐍𝐎𝐖 𝐎𝐍 𝐈 𝐖𝐈𝐋𝐋 𝐆𝐈𝐕𝐄 𝐋𝐈𝐍𝐊 𝐈𝐍 𝐏𝐌 (𝐏𝐑𝐈𝐕𝐀𝐓𝐄 𝐂𝐇𝐀𝐓) 𝐀𝐍𝐃 𝐋𝐎𝐆 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐎𝐍𝐋𝐘", bot, update, reply_markup=InlineKeyboardMarkup(keyboard))
             return
-
-        def editMessage(text: str, message: Message, reply_markup=None):
+        
+def editMessage(text: str, message: Message, reply_markup=None):
     try:
         bot.edit_message_text(text=text, message_id=message.message_id,
                               chat_id=message.chat.id,reply_markup=reply_markup,
